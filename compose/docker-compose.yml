@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql_db
+    container_name: mysql_db
+    restart: always
+  phpserver:
+    image: server
+    container_name: apache_server 
+    restart: always
+    ports:
+      - 8888:80
